@@ -94,3 +94,19 @@ const typed6=new Typed('.multiple-text6',{
     backDelay:1000,
     loop:true,
 });
+
+function resetIcons() {
+    document.querySelectorAll('.navbar a').forEach(item => {
+        item.innerHTML = item.dataset.defaultText;
+    });
+}
+
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        resetIcons();
+        item.innerHTML = item.dataset.activeText;
+    });
+});
+
+
+
