@@ -295,7 +295,7 @@
         <h2 class="heading"> <span class="multiple-text5"></span></h2>
         <img class="phone" src="./zPhoneImg.png" alt="img contact">
     </div>
-    <form action="#">
+    <form id="contactForm" action="#">
         <div class="input-box">
             <input type="text" placeholder="Your Name" required>
         </div>
@@ -309,7 +309,12 @@
         <input type="submit" value="Submit &rarr;" class="btn">
     </form>
 </div>
-
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Your message sent successfully!");
+    });
+</script>
 
 
 
